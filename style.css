@@ -5,6 +5,11 @@
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 50px 0;
     font-family: "Arial, sans-serif";
     text-align: center;
@@ -26,11 +31,13 @@ body {
 }
 
 .board {
-    width: 330px;
-    margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(3, 110px);
-    grid-template-rows: repeat(3, 110px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.box{
+    width: 150px;
+    height: 150px;
 }
 
 .box {
@@ -68,6 +75,7 @@ body {
     margin-top: 30px;
     border-radius: 6px;
     font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .computer-btn.off {
