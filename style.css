@@ -32,12 +32,8 @@ body {
 
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-.box{
-    width: 150px;
-    height: 150px;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
 }
 
 .box {
