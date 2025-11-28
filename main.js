@@ -19,13 +19,13 @@ boxes.forEach((box, i) => {
     box.addEventListener("click", () => {
         if (currentX) {
             box.innerText = "X";
-                        box.classList.add("x-color");
+            box.classList.add("x-color");
             box.classList.remove("o-color");
             currentX = false;
             statusText.innerHTML = `<p class="x-text">O</p> PLAYER 2's turn`;
         } else {
             box.innerText = "O";
-                        box.classList.add("o-color");
+            box.classList.add("o-color");
             box.classList.remove("x-color");
             currentX = true;
             statusText.innerHTML = `<p class="x-text">X</p> PLAYER 1's turn`;
@@ -119,6 +119,8 @@ function computerMove() {
     let randomIndex = emptyIndexes[Math.floor(Math.random() * emptyIndexes.length)];
 
     boxes[randomIndex].innerText = "O";
+    boxes[randomIndex].classList.add("o-color");
+    boxes[randomIndex].classList.remove("x-color");
     boxes[randomIndex].disabled = true;
     board[randomIndex] = "O";
 
